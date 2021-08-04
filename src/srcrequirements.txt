@@ -1,2 +1,2 @@
-npm install --save typeface-open-sans
 npm install react-router-dom
+npm install @fontsource/open-sans

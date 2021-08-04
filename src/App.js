@@ -11,26 +11,30 @@ import Home from './Home'
 import About from './About'
 import Cart from './Cart'
 import Logo from './Logo'
+import Menu from './Menu'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <div className="NavBar">
-              <Logo/>
-              <Link className="NavLink" to="/">Home</Link>
-              <Link className="NavLink" to="/about">About</Link>
+              <Link to="/"><Logo to="/"/></Link>
+              <Link className="NavLink" to="/menu">Menu</Link>
               <Link className="NavLink" to="/cart">Cart</Link>
+              <Link className="NavLink" to="/about">About</Link>
         </div>
         <Switch>
-          <Route path="/home">
-            <Home />
+          <Route path="/menu">
+            <Menu />
           </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/cart">
             <Cart />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>

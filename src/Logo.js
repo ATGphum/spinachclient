@@ -1,5 +1,5 @@
-import React from "react";
 import SpinachPic from "./images/modern-spinach1.png"
+import "./Logo.css"
 
 export default function Logo(){
     return (
