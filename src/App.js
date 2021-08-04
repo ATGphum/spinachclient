@@ -10,24 +10,18 @@ import {
 import Home from './Home'
 import About from './About'
 import Cart from './Cart'
+import Logo from './Logo'
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/cart">Cart</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="App">
+        <div className="NavBar">
+              <Logo/>
+              <Link className="NavLink" to="/">Home</Link>
+              <Link className="NavLink" to="/about">About</Link>
+              <Link className="NavLink" to="/cart">Cart</Link>
+        </div>
         <Switch>
           <Route path="/home">
             <Home />
