@@ -1,0 +1,16 @@
+.Slide {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.SlideText {
+    color: white;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: auto;
+    width: 60%;
+    height: 5em;
+}

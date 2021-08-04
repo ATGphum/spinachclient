@@ -41,10 +41,14 @@
 }
 
 .NavBar {
+  width: 100%;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-between;
+  background-color: white;
+  z-index: 1;
 }
 
 .NavLink {
