@@ -48,6 +48,9 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   background-color: white;
+}
+
+.NavBarShow {
   z-index: 1;
 }
 
@@ -55,6 +58,5 @@
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
-  font-weight: 800;
   padding: 1em 2em 1em 2em;
 }
