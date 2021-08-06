@@ -4,15 +4,16 @@
     background-size: cover;
     position: relative;
     height: 100vh;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .SlideText {
     color: white;
     font-size: 2.6rem;
     font-weight: 800;
-    margin: auto;
+    margin: auto auto 0 auto;
     width: 60%;
-    height: 5em;
 }
 
 .ScrollText {
@@ -38,4 +39,28 @@
     width: 1px;
     height: 50px;
     background: #ffffff;;
+}
+
+.SlideBullets {
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 55px;
+    display: block;
+    z-index: 1;
+    margin: 0 auto auto auto;
+    display: flex;
+}
+
+.SlideBullet {
+    color: white;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 50%;
+    border-style: solid;
+    margin: 1em;
+}
+
+.SlideBulletSelected {
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px #d6d6d6;
 }

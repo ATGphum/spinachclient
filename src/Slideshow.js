@@ -10,8 +10,37 @@ function Slide(props){
     return (
         <div style={{backgroundImage: "url(" + image + ")"}} className="Slide">
             <div className="SlideText">{phrase}</div>
+            <SlideBullets slideNumber={props.slideNumber}/>
             <ScrollText/>
         </div>
+    )
+}
+
+function SlideBullets(props){
+    return (
+        <div className="SlideBullets">
+            <SlideBullet bulletId={0} slideNumber={props.slideNumber}/>
+            <SlideBullet bulletId={1} slideNumber={props.slideNumber}/>
+            <SlideBullet bulletId={2} slideNumber={props.slideNumber}/>
+        </div>
+    )
+}
+
+function SlideBullet(props){
+
+    const [isSelectedBullet, setSelectedBullet] = useState(false);
+
+    useEffect(() => {
+        if(props.bulletId == props.slideNumber){
+            setSelectedBullet(true)
+        }
+        else{
+            setSelectedBullet(false)
+        }
+    }, [props.slideNumber])
+
+    return (
+        <span className={`SlideBullet ${isSelectedBullet && 'SlideBulletSelected'}`}></span>
     )
 }
 
@@ -33,16 +62,16 @@ export default function Slideshow() {
     useEffect(() => {
 
         let updateSlide = () => {
+            setImage(imageArray[(currentSlide + 1) % 3])
+            setText(textArray[(currentSlide + 1) % 3])
             setCurrentSlide((currentSlide + 1) % 3)
-            setImage(imageArray[currentSlide])
-            setText(textArray[currentSlide])
         }
 
-        window.setTimeout(updateSlide, 5000)
-    })
+        window.setTimeout(updateSlide, 1000)
+    }, [currentSlide])
 
 
     return (
-        <Slide image={slideImage} phrase={slideText}/>
+        <Slide image={slideImage} phrase={slideText} slideNumber={currentSlide}/>
     )
 }
