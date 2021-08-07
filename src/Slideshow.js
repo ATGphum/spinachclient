@@ -9,25 +9,28 @@ function Slide(props){
     let phrase = props.phrase
     let image = props.image
     let slideNumber = props.slideNumber
+    let slideDuration = props.slideDuration
 
-    const [show, setShow] = useState(0);
-/*
+    const [show, setShow] = useState(false);
+
     useEffect(() => {
         console.log(show)
-        setShow(1)
-        return () => {
-            setShow(0);
-        }
-    }, [])
-*/
+        setShow(true)
+        window.setTimeout(() => {setShow(false)}, slideDuration - 300)
+    }, [slideNumber])
 
     return ( 
         //<div style={{backgroundImage: "url(" + image + ")"}} className="Slide"></div>(
         <div className="Slide">
             <SlideImage image={image}/>
-            <SlideText phrase={phrase}/>
+            <CSSTransition
+                classNames="SlideTextTrans"
+                in={show}
+                timeout={300}>
+                <SlideText phrase={phrase} />
+            </CSSTransition>
             <SlideBullets slideNumber={slideNumber}/>
-            <ScrollText show={show}/>
+            <ScrollText/>
         </div>
     )
 }
@@ -40,23 +43,22 @@ function SlideImage(props){
 }
 
 function SlideText(props){
+
     let phrase = props.phrase
+
     return (
-        <CSSTransition
-            classNames="my-element"
-            in={props.show}
-            timeout={300}>
-            <div className="SlideText">{phrase}</div>
-        </CSSTransition>
+        <div className="SlideText">{phrase}</div>
     )
 }
 
 function SlideBullets(props){
+    let slideNumber = props.slideNumber
+
     return (
         <div className="SlideBullets">
-            <SlideBullet bulletId={0} slideNumber={props.slideNumber}/>
-            <SlideBullet bulletId={1} slideNumber={props.slideNumber}/>
-            <SlideBullet bulletId={2} slideNumber={props.slideNumber}/>
+            <SlideBullet bulletId={0} slideNumber={slideNumber}/>
+            <SlideBullet bulletId={1} slideNumber={slideNumber}/>
+            <SlideBullet bulletId={2} slideNumber={slideNumber}/>
         </div>
     )
 }
@@ -79,9 +81,9 @@ function SlideBullet(props){
     )
 }
 
-function ScrollText(props){
+function ScrollText(){
     return (
-        <span className="ScrollText">SCROLL DOWN {props.show}</span>
+        <span className="ScrollText">SCROLL DOWN</span>
     )
 }
 
@@ -89,6 +91,7 @@ export default function Slideshow() {
 
     let imageArray = [LuPull, RefreshingRiver, Statistics]
     let textArray = ["Can take you past your natural limit for half natty results, at none of the cost", "Naturally found and extracted from spinach, vegan diet ftw", "Shown in lab data to yield superior results to Dianabol, with no side effectz"]
+    let slideDuration = 5000
 
     const [slideImage, setImage] = useState(imageArray[0]);
     const [slideText, setText] = useState(textArray[0]);
@@ -102,11 +105,11 @@ export default function Slideshow() {
             setCurrentSlide((currentSlide + 1) % 3)
         }
 
-        window.setTimeout(updateSlide, 2000)
+        window.setTimeout(updateSlide, slideDuration)
     }, [currentSlide])
 
 
     return (
-        <Slide image={slideImage} phrase={slideText} slideNumber={currentSlide}/>
+        <Slide image={slideImage} phrase={slideText} slideNumber={currentSlide} slideDuration={slideDuration}/>
     )
 }
