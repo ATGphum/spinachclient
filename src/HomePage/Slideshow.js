@@ -16,7 +16,7 @@ function Slide(props){
     useEffect(() => {
         setShow(true)
         window.setTimeout(() => {setShow(false)}, slideDuration - 300)
-    }, [slideNumber])
+    }, [slideNumber, slideDuration])
 
     return ( 
         //<div style={{backgroundImage: "url(" + image + ")"}} className="Slide"></div>(
@@ -67,13 +67,13 @@ function SlideBullet(props){
     const [isSelectedBullet, setSelectedBullet] = useState(false);
 
     useEffect(() => {
-        if(props.bulletId == props.slideNumber){
+        if(props.bulletId === props.slideNumber){
             setSelectedBullet(true)
         }
         else{
             setSelectedBullet(false)
         }
-    }, [props.slideNumber])
+    }, [props.slideNumber, props.bulletId])
 
     return (
         <span className={`SlideBullet ${isSelectedBullet && 'SlideBulletSelected'}`}></span>
