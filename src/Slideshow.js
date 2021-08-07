@@ -3,16 +3,51 @@ import LuPull from "./images/side-lu.jpg"
 import RefreshingRiver from "./images/refreshing-river.jpg"
 import Statistics from "./images/statistics.jpg"
 import React, { useState, useEffect } from "react";
+import { CSSTransition } from 'react-transition-group';
 
 function Slide(props){
     let phrase = props.phrase
     let image = props.image
-    return (
-        <div style={{backgroundImage: "url(" + image + ")"}} className="Slide">
-            <div className="SlideText">{phrase}</div>
-            <SlideBullets slideNumber={props.slideNumber}/>
-            <ScrollText/>
+    let slideNumber = props.slideNumber
+
+    const [show, setShow] = useState(0);
+/*
+    useEffect(() => {
+        console.log(show)
+        setShow(1)
+        return () => {
+            setShow(0);
+        }
+    }, [])
+*/
+
+    return ( 
+        //<div style={{backgroundImage: "url(" + image + ")"}} className="Slide"></div>(
+        <div className="Slide">
+            <SlideImage image={image}/>
+            <SlideText phrase={phrase}/>
+            <SlideBullets slideNumber={slideNumber}/>
+            <ScrollText show={show}/>
         </div>
+    )
+}
+
+function SlideImage(props){
+    let image = props.image
+    return (
+        <img src={image} className="SlidePic" alt="slideimage" />
+    )
+}
+
+function SlideText(props){
+    let phrase = props.phrase
+    return (
+        <CSSTransition
+            classNames="my-element"
+            in={props.show}
+            timeout={300}>
+            <div className="SlideText">{phrase}</div>
+        </CSSTransition>
     )
 }
 
@@ -44,9 +79,9 @@ function SlideBullet(props){
     )
 }
 
-function ScrollText(){
+function ScrollText(props){
     return (
-        <span className="ScrollText">SCROLL DOWN</span>
+        <span className="ScrollText">SCROLL DOWN {props.show}</span>
     )
 }
 
@@ -67,7 +102,7 @@ export default function Slideshow() {
             setCurrentSlide((currentSlide + 1) % 3)
         }
 
-        window.setTimeout(updateSlide, 1000)
+        window.setTimeout(updateSlide, 2000)
     }, [currentSlide])
 
 
