@@ -1,5 +1,6 @@
 import "./Home.css"
 import Slideshow from "./Slideshow"
+import PageTitle from "./PageTitle"
 
 export default function Home() {
     return (
@@ -12,6 +13,8 @@ export default function Home() {
 
 function SecondPage() {
     return (
-        <div className="SecondPage"></div>
+        <div className="SecondPage">
+            <PageTitle titleColor={"#999"} titleContent={"Product"}/>
+        </div>
     )
 }

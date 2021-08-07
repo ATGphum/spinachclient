@@ -1,3 +1,4 @@
+import "./PageTitle.css"
 
 export default function PageTitle(props){
 
@@ -10,6 +11,6 @@ export default function PageTitle(props){
     };
 
     return (
-        <div style={divStyle, 'PageTitle'}>{titleContent}</div>
+        <div style={divStyle} className='PageTitle'>{titleContent}</div>
     )
 }

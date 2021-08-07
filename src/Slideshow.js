@@ -14,7 +14,6 @@ function Slide(props){
     const [show, setShow] = useState(false);
 
     useEffect(() => {
-        console.log(show)
         setShow(true)
         window.setTimeout(() => {setShow(false)}, slideDuration - 300)
     }, [slideNumber])

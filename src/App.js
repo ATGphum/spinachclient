@@ -20,6 +20,8 @@ function App() {
 
   const controlNavbar = () => {
     let currentPosition = window.scrollY
+    console.log("current " + currentPosition)
+    console.log("last " + lastScrollPosition)
     if (currentPosition > lastScrollPosition) {
       setShow(false)
     } else {

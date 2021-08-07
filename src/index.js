@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "@fontsource/open-sans";
 import "@fontsource/noto-sans"; 
-import "@fontsource/montserrat";
+import "@fontsource/montserrat/600.css";
 
 ReactDOM.render(
   <React.StrictMode>
