@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "@fontsource/open-sans"; 
+import "@fontsource/open-sans";
+import "@fontsource/noto-sans"; 
+import "@fontsource/montserrat";
 
 ReactDOM.render(
   <React.StrictMode>
