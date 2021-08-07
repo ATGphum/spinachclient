@@ -1,0 +1,11 @@
+.FlexBox{
+    height: 28em;
+    width: 28em;
+    background-color: #139f5b;;
+    flex-shrink: 0;
+}
+
+.BoxContainer .FlexBox:nth-child(2) , .BoxContainer .FlexBox:nth-child(4){
+    align-self: flex-end;
+    margin: -20em -0em -5em -5em;
+}

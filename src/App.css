@@ -52,7 +52,6 @@
 
 .NavBarShow {
   z-index: 2;
-  transition: z-index 5s;
 }
 
 .NavLink {
