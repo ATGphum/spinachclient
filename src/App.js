@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 
-import Home from './Home'
+import Home from './HomePage/Home'
 import About from './About'
 import Cart from './Cart'
 import Logo from './Logo'
@@ -18,24 +18,29 @@ function App() {
   const [show, setShow] = useState(true)
   const [lastScrollPosition, setScrollPosition] = useState(0)
 
-  const controlNavbar = () => {
-    let currentPosition = window.scrollY
-    console.log("current " + currentPosition)
-    console.log("last " + lastScrollPosition)
-    if (currentPosition > lastScrollPosition) {
-      setShow(false)
-    } else {
-      setShow(true)
-    }
-    setScrollPosition(currentPosition)
-  }
-
   useEffect(() => {
+
+    const controlNavbar = () => {
+      let currentPosition = window.scrollY;
+      console.log("last " + lastScrollPosition);
+      console.log("current " + currentPosition);
+  
+      
+      if (currentPosition > lastScrollPosition) {
+        setShow(false)
+      }
+      if (currentPosition < lastScrollPosition) {
+        setShow(true)
+      }
+      
+      setScrollPosition(currentPosition);
+    }
+
     window.addEventListener('scroll', controlNavbar)
     return () => {
       window.removeEventListener('scroll', controlNavbar)
     }
-  }, [])
+  }, [lastScrollPosition])
 
   return (
     <Router>
