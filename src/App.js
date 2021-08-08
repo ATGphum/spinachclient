@@ -13,6 +13,7 @@ import Cart from './Cart'
 import Logo from './Logo'
 import Menu from './Menu'
 import Userbutton from './Userbutton'
+import BottomBar from './BottomBar'
 
 function App() {
   const [show, setShow] = useState(true)
@@ -44,7 +45,9 @@ function App() {
       <div className="App">
         <div className={`NavBar ${show && 'NavBarShow'}`}>
           <div className="NavFlexContainer">
-            <Link to="/"><Logo to="/" /></Link>
+            <Link to="/">
+              <Logo to="/" height={'4em'}/>
+            </Link>
             <div className="CentralNavBar">
 
               <Link className="NavLink" to="/menu">Menu</Link>
@@ -68,6 +71,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <BottomBar/>
       </div>
     </Router>
   );

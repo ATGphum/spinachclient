@@ -1,0 +1,10 @@
+.BottomBar {
+    position: relative;
+    text-align: left;
+    padding: 4em;
+}
+
+.BottomLink {
+    color: #888;
+    padding: 0.3em;
+}
