@@ -20,7 +20,7 @@ export default function PageTitle(props){
 
         if (currentScroll > fadeStartOffset && currentScroll < fadeEndOffset) {
             setStyle({
-                opacity: 1 - (currentScroll - fadeStartOffset) / (fadeEndOffset - fadeStartOffset) - 0.1,
+                opacity: 1 - (currentScroll - fadeStartOffset) / (fadeEndOffset - fadeStartOffset),
                 color: titleColor
             });
             //console.log("decreasing opacity: " + style["opacity"])
