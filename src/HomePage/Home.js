@@ -3,6 +3,7 @@ import Slideshow from "./Slideshow"
 import PageTitle from "./PageTitle"
 import PageHeader from "./PageHeader"
 import FlexBox from "./FlexBox"
+import ProductBox from "./ProductBox"
 
 export default function Home() {
     return (
@@ -34,6 +35,7 @@ function ThirdPage() {
         <div className="ThirdPage">
             <PageTitle titleColor={"#ffffff"} titleContent={"Product"} fadeStartOffset={4000} fadeEndOffset={5000}/>
             <PageHeader headerColor={"#ffffff"} headerContent={"We make good things better with the power of Odin, the sun god"}/>
+            <ProductBox/>
         </div>
     )
 }
