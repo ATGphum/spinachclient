@@ -17,24 +17,13 @@ export default function PageTitle(props){
     function fadeEffect() {
 
         const currentScroll = window.pageYOffset;
-            /*
-            if(currentScroll <= 700) {
 
-                setOpacity(1 - currentScroll/700)
-              //opacity = 1 - currentScroll / 700;
-            } else {
-                setOpacity(0)
-                console.log("starts fading")
-              //opacity = 0;
-            }
-            */
         if (currentScroll > fadeStartOffset && currentScroll < fadeEndOffset) {
             setStyle({
                 opacity: 1 - (currentScroll - fadeStartOffset) / (fadeEndOffset - fadeStartOffset) - 0.1,
                 color: titleColor
             });
             //console.log("decreasing opacity: " + style["opacity"])
-            //}
         }
         else if (style['opacity'] !== 0 && currentScroll > fadeEndOffset) {
             setStyle({
@@ -42,6 +31,7 @@ export default function PageTitle(props){
                 color: titleColor
             });
         }
+        //console.log(currentScroll)
     }
 
     useEffect(() => {
