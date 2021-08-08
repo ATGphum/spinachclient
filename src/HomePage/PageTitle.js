@@ -5,7 +5,8 @@ export default function PageTitle(props){
 
     let titleColor = props.titleColor;
     let titleContent = props.titleContent;
-    let fadeOffset = props.fadeOffset //page offset to start fading
+    let fadeStartOffset = props.fadeStartOffset //page offset to start fading
+    let fadeEndOffset = props.fadeEndOffset //page offset to end fading
 
 
     const [style, setStyle] = useState({
@@ -27,19 +28,20 @@ export default function PageTitle(props){
               //opacity = 0;
             }
             */
-        if (currentScroll > 700 && currentScroll < 700 + 300) {
-            //if (currentScroll % 10 == 0) {
-                setStyle({
-                    opacity: 1 - (currentScroll-700)/(1000-700), 
-                    color: titleColor 
-                });
-                //opacity = 1 - currentScroll / 700;
-                console.log("decreasing opacity: " + style["opacity"])
+        if (currentScroll > fadeStartOffset && currentScroll < fadeEndOffset) {
+            setStyle({
+                opacity: 1 - (currentScroll - fadeStartOffset) / (fadeEndOffset - fadeStartOffset) - 0.1,
+                color: titleColor
+            });
+            //console.log("decreasing opacity: " + style["opacity"])
             //}
-        } else {
-
         }
-            console.log(window.pageYOffset)
+        else if (style['opacity'] !== 0 && currentScroll > fadeEndOffset) {
+            setStyle({
+                opacity: 0,
+                color: titleColor
+            });
+        }
     }
 
     useEffect(() => {
