@@ -1,4 +1,4 @@
-import SpinachPic from "./images/modern-spinach1.png"
+import SpinachPic from "./images/modern-spinach1.1.png"
 import "./Logo.css"
 
 export default function Logo(){

@@ -43,10 +43,7 @@
 .NavBar {
   width: 100%;
   position: fixed;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+
   background-color: white;
 }
 
@@ -54,9 +51,17 @@
   z-index: 2;
 }
 
+.NavFlexContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 3em 0 3em;
+}
+
 .NavLink {
   text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
+  color: rgb(130, 130, 130);
+  font-size: 1rem;
   padding: 1em 2em 1em 2em;
 }

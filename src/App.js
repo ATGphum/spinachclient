@@ -43,13 +43,16 @@ function App() {
     <Router>
       <div className="App">
         <div className={`NavBar ${show && 'NavBarShow'}`}>
-          <Link to="/"><Logo to="/" /></Link>
-          <div className="CentralNavBar">
-            <Link className="NavLink" to="/menu">Menu</Link>
-            <Link className="NavLink" to="/cart">Cart</Link>
-            <Link className="NavLink" to="/about">About</Link>
+          <div className="NavFlexContainer">
+            <Link to="/"><Logo to="/" /></Link>
+            <div className="CentralNavBar">
+
+              <Link className="NavLink" to="/menu">Menu</Link>
+              <Link className="NavLink" to="/cart">Cart</Link>
+              <Link className="NavLink" to="/about">About</Link>
+              <Userbutton className="NavLink" />
+            </div>
           </div>
-          <Userbutton />
         </div>
         <Switch>
           <Route path="/menu">

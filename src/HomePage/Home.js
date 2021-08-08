@@ -21,9 +21,9 @@ function SecondPage() {
             <PageHeader headerColor={"#999"} headerContent={"Introducing Spinach.sup, Australia's new and exciting supplement startup."}/>
             <div className="BoxContainer">
                 <FlexBox />
-                <FlexBox backgroundColor="#223475"/>
                 <FlexBox />
-                <FlexBox backgroundColor="#223475"/>
+                <FlexBox />
+                <FlexBox />
             </div>
         </div>
     )
