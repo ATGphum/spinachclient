@@ -8,6 +8,7 @@ export default function BottomBar() {
             <div className='BottomLink'>About us</div>
             <div className='BottomLink'>Frequently asked questions</div>
             <div className='BottomLink'>Shipping and returns</div>
+            <div className='BottomLink'>Terms and conditions</div>
         </div>
     )
 }
