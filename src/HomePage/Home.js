@@ -18,7 +18,7 @@ function SecondPage() {
     return (
         <div className="SecondPage">
             <PageTitle titleColor={"#999"} titleContent={"Company"} fadeStartOffset={750} fadeEndOffset={1000}/>
-            <PageHeader headerColor={"#999"} headerContent={"Introducing Spinach.sup, Australia's new and exciting supplement startup."}/>
+            <PageHeader headerColor={"#999"} headerContent={"Introducing Oppa, Australia's new and exciting supplement startup."}/>
             <div className="BoxContainer">
                 <FlexBox />
                 <FlexBox />

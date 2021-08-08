@@ -1,5 +1,5 @@
 import "./Slideshow.css"
-import LuPull from "./images/side-lu.jpg"
+import ShiPull from "./images/shi-pull-cropped.jpg"
 import RefreshingRiver from "./images/refreshing-river.jpg"
 import Statistics from "./images/statistics.jpg"
 import React, { useState, useEffect } from "react";
@@ -88,7 +88,7 @@ function ScrollText(){
 
 export default function Slideshow() {
 
-    let imageArray = [LuPull, RefreshingRiver, Statistics]
+    let imageArray = [ShiPull, RefreshingRiver, Statistics]
     let textArray = ["Can take you past your natural limit for half natty results, at none of the cost", "Naturally found and extracted from spinach, vegan diet ftw", "Shown in lab data to yield superior results to Dianabol, with no side effectz"]
     let slideDuration = 5000
 

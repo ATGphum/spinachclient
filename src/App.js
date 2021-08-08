@@ -46,7 +46,7 @@ function App() {
         <div className={`NavBar ${show && 'NavBarShow'}`}>
           <div className="NavFlexContainer">
             <Link to="/">
-              <Logo to="/" height={'4em'}/>
+              <Logo to="/" height={'5em'} logoPick={0}/>
             </Link>
             <div className="CentralNavBar">
 
