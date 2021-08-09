@@ -11,7 +11,7 @@ import Home from './HomePage/Home'
 import About from './About'
 import Cart from './Cart'
 import Logo from './Logo'
-import Menu from './Menu'
+import Menu from './Menu/Menu'
 import Userbutton from './Userbutton'
 import BottomBar from './BottomBar'
 

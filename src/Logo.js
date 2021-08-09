@@ -1,6 +1,6 @@
 //import SpinachPic from "./images/modern-spinach1.1.png"
-import logoStandard from "./vectors/oppa1.0.svg"
-import logoGrey from "./vectors/oppa1.1.svg"
+import logoStandard from "./vectors/oppasoju1.0.svg"
+import logoGrey from "./vectors/oppasoju1.1.svg"
 import "./Logo.css"
 
 export default function Logo(props){
