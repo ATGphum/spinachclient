@@ -19,7 +19,7 @@ function SecondPage() {
     return (
         <div className="SecondPage">
             <PageTitle titleColor={"#999"} titleContent={"Company"} fadeStartOffset={800} fadeEndOffset={1050}/>
-            <PageHeader headerColor={"#999"} headerContent={"Introducing Oppa, Australia's new and exciting supplement startup."}/>
+            <PageHeader headerColor={"#999"} headerContent={"Introducing Oppa, Australia's new and exciting soju startup."}/>
             <div className="BoxContainer">
                 <FlexBox />
                 <FlexBox />
@@ -34,7 +34,7 @@ function ThirdPage() {
     return (
         <div className="ThirdPage">
             <PageTitle titleColor={"#ffffff"} titleContent={"Product"} fadeStartOffset={2300} fadeEndOffset={2550}/>
-            <PageHeader headerColor={"#ffffff"} headerContent={"We make good things better with the power of Odin, the sun god"}/>
+            <PageHeader headerColor={"#ffffff"} headerContent={"From Chilsung to Andong Soju, we stock the specific soju for your needs"}/>
             <ProductBox/>
         </div>
     )
