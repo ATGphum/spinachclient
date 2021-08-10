@@ -30,6 +30,7 @@ export default function NavBar(props) {
         window.removeEventListener('scroll', controlNavbar)
       }
     }, [lastScrollPosition])
+
     return (
       <div className={`NavBar ${show && 'NavBarShow'}`}>
         <div className="NavFlexContainer">
@@ -39,7 +40,7 @@ export default function NavBar(props) {
           <div className="CentralNavBar">
   
             <Link className="NavLink" to="/menu">Menu</Link>
-            <Link className="NavLink" to="/cart">Cart</Link>
+            <Link className="NavLink" to="/bag">Bag</Link>
             <Link className="NavLink" to="/about">About</Link>
             <Userbutton className="NavLink" />
           </div>

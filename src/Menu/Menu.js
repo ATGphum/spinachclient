@@ -9,62 +9,29 @@ let itemList = [
         id: 0,
         title: "Chilsung soju",
         imageUrl: "https://justliquor.com.au/1080-large_default/chamisul-soju.jpg",
-        price: 19
+        price: 19,
+        description: "Sweet green grape meets morning dew for the best flavor. Fruit juice in soju is becoming more popular, and Jinro Green Grape has unique green grape flavor and taste that everyone can enjoy. Easy to drink with an alcohol content of 13%, it has such a clean and fresh flavor that will capture your heart."
     },
     { 
         id: 1,
         title: "Andong soju",
         imageUrl: "https://justliquor.com.au/1015-large_default/good-day-soju-citron.jpg",
-        price: 6
+        price: 6,
+        description: "Sweet green grape meets morning dew for the best flavor. Fruit juice in soju is becoming more popular, and Jinro Green Grape has unique green grape flavor and taste that everyone can enjoy. Easy to drink with an alcohol content of 13%, it has such a clean and fresh flavor that will capture your heart."
     },
     { 
         id: 2,
         title: "Churum soju",
         imageUrl: "https://justliquor.com.au/2776-large_default/chum-churum-original-soju.jpg",
-        price: 10
-    },
-    { 
-        id: 0,
-        title: "Ashpalmer soju",
-        imageUrl: "https://justliquor.com.au/1080-large_default/chamisul-soju.jpg",
-        price: 19
-    },
-    { 
-        id: 1,
-        title: "Tent soju",
-        imageUrl: "https://justliquor.com.au/1015-large_default/good-day-soju-citron.jpg",
-        price: 6
-    },
-    { 
-        id: 2,
-        title: "Anabolic soju",
-        imageUrl: "https://justliquor.com.au/2776-large_default/chum-churum-original-soju.jpg",
-        price: 10
-    },
-    { 
-        id: 0,
-        title: "Chilsung soju",
-        imageUrl: "https://justliquor.com.au/1080-large_default/chamisul-soju.jpg",
-        price: 19
-    },
-    { 
-        id: 1,
-        title: "Andong soju",
-        imageUrl: "https://justliquor.com.au/1015-large_default/good-day-soju-citron.jpg",
-        price: 6
-    },
-    { 
-        id: 2,
-        title: "Churum soju",
-        imageUrl: "https://justliquor.com.au/2776-large_default/chum-churum-original-soju.jpg",
-        price: 10
+        price: 10,
+        description: "Sweet green grape meets morning dew for the best flavor. Fruit juice in soju is becoming more popular, and Jinro Green Grape has unique green grape flavor and taste that everyone can enjoy. Easy to drink with an alcohol content of 13%, it has such a clean and fresh flavor that will capture your heart."
     },
 ];
 
 export default function Menu() {
 
     const menuItems = itemList.map((item) => 
-        <MenuBox key={item.title} title={item.title} productImage={item.imageUrl} price={item.price}/>
+        <MenuBox key={item.title} title={item.title} productImage={item.imageUrl} price={item.price} description={item.description}/>
     );
 
     return (

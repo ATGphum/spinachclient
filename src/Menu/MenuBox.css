@@ -8,6 +8,11 @@
     flex-shrink: 0;
 }
 
+.MenuBoxIncrease {
+    height: 30em;
+    width: 30em;
+}
+
 .MenuBox:hover{
     background-color: #b6e2d3;
 }
@@ -51,4 +56,37 @@
 .Each {
     font-size: 0.4em;
     font-weight: 400;
+}
+
+.HiddenItemDescription {
+    visibility: hidden;
+}
+
+.ItemDescription {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5%;
+    width: 70%;
+    height: 30%;
+    overflow: auto;
+    text-align: left;
+    transition: 3s;
+}
+
+.CloseButton {
+    color: #bfbfbf;
+    font-weight: 800;
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: 1s;
+}
+
+.CloseButton:Hover {
+    color: #000000; 
+    cursor: pointer;
 }

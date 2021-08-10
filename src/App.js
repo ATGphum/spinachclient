@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,10 +9,8 @@ import {
 import NavBar from './NavBar'
 import Home from './HomePage/Home'
 import About from './About'
-import Cart from './Cart'
-
+import Bag from './Bag'
 import Menu from './Menu/Menu'
-
 import BottomBar from './BottomBar'
 
 function App() {
@@ -28,8 +26,8 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/cart">
-            <Cart />
+          <Route path="/bag">
+            <Bag />
           </Route>
           <Route path="/">
             <Home />
