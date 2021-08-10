@@ -1,0 +1,12 @@
+.PageTitle {
+    font-family: "Montserrat";
+    font-size: 10rem;
+    font-weight: 600;;
+    position: sticky;
+    top: 0.5em;
+    pointer-events: none;
+}
+
+.PageTitle:hover {
+    cursor: pointer;
+}

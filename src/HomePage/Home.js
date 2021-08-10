@@ -34,7 +34,7 @@ function ThirdPage() {
     return (
         <div className="ThirdPage">
             <PageTitle titleColor={"#ffffff"} titleContent={"Product"} fadeStartOffset={2300} fadeEndOffset={2550}/>
-            <PageHeader headerColor={"#ffffff"} headerContent={"From Chilsung to Andong Soju, we stock the specific soju for your needs"}/>
+            <PageHeader headerColor={"#ffffff"} headerContent={"From Chilsung to Andong Soju, we provide the specific soju for your needs"}/>
             <ProductBox/>
         </div>
     )

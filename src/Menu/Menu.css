@@ -1,0 +1,13 @@
+.Menu {
+    padding-top: 7em;
+    position: relative;
+    background-color: #fff;
+}
+
+.MenuBoxContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3em auto 3em auto;
+    width: 60%;
+}

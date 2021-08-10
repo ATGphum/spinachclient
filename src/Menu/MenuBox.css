@@ -1,0 +1,54 @@
+.MenuBox {
+    position: relative;
+    background-color: #f4f4f4;
+    height: 15em;
+    width: 15em;
+    margin: 1em;
+    transition: 0.5s;
+    flex-shrink: 0;
+}
+
+.MenuBox:hover{
+    background-color: #b6e2d3;
+}
+
+.ItemPic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ItemName {
+    font-weight: 700;
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 0em
+}
+
+.ItemPrice {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    bottom: 5%;
+    left: 5%;
+    position: absolute;
+}
+
+.ItemPic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15em;
+    bottom: -0.7em;
+    right: -4em;
+    position: absolute;
+}
+
+.Each {
+    font-size: 0.4em;
+    font-weight: 400;
+}
