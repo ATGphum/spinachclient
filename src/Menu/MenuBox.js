@@ -31,11 +31,9 @@ export default function MenuBox(props) {
             <div className="ItemName">{title}</div>
             <div className={`HiddenItemElement ${showDetails && 'ItemDescription'}`}>{description}</div>
             <div className="ItemPriceLine">
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'RemoveBagButton'}`}>-</span>
                 <span><span className="ItemPrice">${price}</span><span className="Each">each</span></span>
-                <span className={`HiddenItemElement ${showDetails && 'BagButton'}`}>
-                    <div>+</div>
-                    <div>-</div>
-                </span>
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'AddBagButton'}`}>+</span>
             </div>
             <MenuImage image={productImage}/>
         </div>

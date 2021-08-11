@@ -78,18 +78,39 @@
     transition: 2s;
 }
 
-.BagButton {
+.BagButtons {
     visibility: visible; 
     margin: 0 0 0 0.5em;
     text-align: center;
 }
 
-.AddBagButton {
+.HiddenBagButton {
+    display: none;
+}
 
+.BagButton {
+    visibility: visible;
+    display: block;
+    transition: 0.5s;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.BagButton:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.AddBagButton {
+    margin-left: 0.3em;
 }
 
 .RemoveBagButton {
-
+    margin-right: 0.3em;
 }
 
 .CloseButton {
