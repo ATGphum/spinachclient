@@ -35,13 +35,15 @@
     width: 0em
 }
 
-.ItemPrice {
+.ItemPriceLine {
     text-align: left;
     font-size: 3rem;
     font-weight: 700;
     bottom: 5%;
     left: 5%;
     position: absolute;
+    display: flex;
+    align-items: center;
 }
 
 .ItemPic {
@@ -58,7 +60,7 @@
     font-weight: 400;
 }
 
-.HiddenItemDescription {
+.HiddenItemElement {
     visibility: hidden;
 }
 
@@ -73,17 +75,31 @@
     height: 30%;
     overflow: auto;
     text-align: left;
-    transition: 3s;
+    transition: 2s;
+}
+
+.BagButton {
+    visibility: visible; 
+    margin: 0 0 0 0.5em;
+    text-align: center;
+}
+
+.AddBagButton {
+
+}
+
+.RemoveBagButton {
+
 }
 
 .CloseButton {
-    color: #bfbfbf;
+    color: #f4f4f4;
     font-weight: 800;
     font-size: 3rem;
     position: absolute;
     top: 5%;
     right: 5%;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .CloseButton:Hover {

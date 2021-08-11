@@ -29,8 +29,14 @@ export default function MenuBox(props) {
         <div onClick={() => {if(!showDetails)toggleItemDetails(true)}} className={`MenuBox ${showDetails && 'MenuBoxIncrease'}`}>
             {showDetails && <div onClick={() => {toggleItemDetails(false)}} className="CloseButton">×</div>}
             <div className="ItemName">{title}</div>
-            <div className={`HiddenItemDescription ${showDetails && 'ItemDescription'}`}>{description}</div>
-            <div className="ItemPrice">${price}<span className="Each">each</span></div>
+            <div className={`HiddenItemElement ${showDetails && 'ItemDescription'}`}>{description}</div>
+            <div className="ItemPriceLine">
+                <span><span className="ItemPrice">${price}</span><span className="Each">each</span></span>
+                <span className={`HiddenItemElement ${showDetails && 'BagButton'}`}>
+                    <div>+</div>
+                    <div>-</div>
+                </span>
+            </div>
             <MenuImage image={productImage}/>
         </div>
     )

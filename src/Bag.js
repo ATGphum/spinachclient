@@ -1,6 +1,6 @@
 
-export default function Cart() {
+export default function Bag() {
     return (
-        <div>Cart</div>
+        <div>Bag</div>
     )
 }
