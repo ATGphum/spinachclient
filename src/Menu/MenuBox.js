@@ -9,15 +9,18 @@ function MenuImage(props) {
 }
 
 export default function MenuBox(props) {
-    let title = props.title;
-    let productImage = props.productImage;
-    let price = props.price;
-    let description = props.description;
+    let itemDetails = props.itemDetails
+    let bagAdderFunc = props.bagAdderFunc;
+    let bagRemoverFunc = props.bagRemoverFunc
+
+    let title = itemDetails.title;
+    let productImage = itemDetails.imageUrl;
+    let price = itemDetails.price;
+    let description = itemDetails.description;
 
     const [showDetails, setShowDetails] = useState(false);
 
     function toggleItemDetails(show){
-        console.log(show)
         show? setShowDetails(true) : setShowDetails(false);
     }
 
@@ -31,9 +34,9 @@ export default function MenuBox(props) {
             <div className="ItemName">{title}</div>
             <div className={`HiddenItemElement ${showDetails && 'ItemDescription'}`}>{description}</div>
             <div className="ItemPriceLine">
-                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'RemoveBagButton'}`}>-</span>
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'RemoveBagButton'}`} onClick={() => bagRemoverFunc(itemDetails)}>-</span>
                 <span><span className="ItemPrice">${price}</span><span className="Each">each</span></span>
-                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'AddBagButton'}`}>+</span>
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'AddBagButton'}`} onClick={() => bagAdderFunc(itemDetails)}>+</span>
             </div>
             <MenuImage image={productImage}/>
         </div>
