@@ -14,10 +14,12 @@
 
 .HiddenAlert {
     visibility: hidden;
-    transform: translateX(-50%)
+    opacity: 0;
+    transition: .5s;
 }
 
 .AlertContainer {
     visibility: visible;
+    opacity: 1;
     transition: 1s;
 }

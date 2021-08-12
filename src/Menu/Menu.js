@@ -110,7 +110,6 @@ export default function Menu() {
             focusItem.quantity += amountToIterate;
         }
         
-        console.log(focusItem.quantity)
         setBag(cloneBag);
         setLastModifiedItem({...focusItem}) //pass in spread to force useEffect to occur
     }
@@ -120,6 +119,7 @@ export default function Menu() {
         if(bagAlertMounted.current){
             setBagAlert(<BagAlert item={lastModifiedItem}/>);
             setShowAlert(true)
+            window.setTimeout(() => {if(!showAlert)setShowAlert(false)}, 3000)
         }
         else{
             bagAlertMounted.current = true;
