@@ -41,8 +41,8 @@ export default function NavBar(props) {
   
             <Link className="NavLink" to="/menu">Menu</Link>
             <Link className="NavLink" to="/bag">Bag</Link>
-            <Link className="NavLink" to="/about">About</Link>
-            <Userbutton className="NavLink" />
+            {/*<Link className="NavLink" to="/about">About</Link>
+            <Userbutton className="NavLink" />*/}
           </div>
         </div>
       </div>
