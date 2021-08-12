@@ -1,0 +1,33 @@
+.BagAlert {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.AlertTitle {
+
+}
+
+.AlertItem {
+
+}
+
+.AlertQuantity{
+    position: absolute;
+    bottom: -1rem;
+    right: 6.5rem;
+    font-weight: 800;
+    font-size: 8rem;
+}
+
+.AlertQuantityX {
+    font-size: 5rem;
+}
+
+.AlertPic {
+    width: 15em;
+    transform: translateX(25%);
+    position: absolute;
+    right: 0;
+    bottom: 0;;
+}

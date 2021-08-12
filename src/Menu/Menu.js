@@ -1,8 +1,9 @@
 import "./Menu.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PageTitle from "./PageTitle"
 import PageHeader from "./PageHeader"
 import MenuBox from "./MenuBox"
+import BagAlert from "./BagAlert"
 
 //<PageHeader headerColor={"#999"} headerContent={"Introducing Oppa, Australia's new and exciting soju startup."}/>
 let itemList = [
@@ -89,48 +90,55 @@ export default function Menu() {
             imageUrl: item.imageUrl,
             price: item.price,
             stock: item.stock,
+            description: item.description,
             quantity: 0
         }));
 
     const [bag, setBag] = useState(bagStruct)
+    const [lastModifiedItem, setLastModifiedItem] = useState(-1)
+    const [bagAlert, setBagAlert] = useState(<div></div>)
+    const [showAlert, setShowAlert] = useState(false)
 
-    function addToBag(item, amountToAdd=1){
+    function editItemQuantity(item, amountToIterate){
         let cloneBag = [...bag]; //clone bag to prevent changes to hook
         let focusItem = cloneBag.filter((a) => a.id === item.id)[0];
-        if(focusItem.quantity < focusItem.stock){
-            focusItem.quantity += amountToAdd;
+        if(focusItem.quantity === focusItem.stock && amountToIterate > 0){
         }
-        else{
-            //show that the max quantity has been reached, given the supply!
+        else if(focusItem.quantity === 0 && amountToIterate < 0){
         }
-        
-        setBag(cloneBag);
-    }
-
-    function removeFromBag(item, amountToRemove=1){
-        let cloneBag = [...bag]; //clone bag to prevent changes to hook
-        let focusItem = cloneBag.filter((a) => a.id === item.id)[0];
-        if(focusItem.quantity > 0){
-            focusItem.quantity -= amountToRemove;
-        }
-        else{
-            //do nothing
+        else {
+            focusItem.quantity += amountToIterate;
         }
         
+        console.log(focusItem.quantity)
         setBag(cloneBag);
+        setLastModifiedItem({...focusItem}) //pass in spread to force useEffect to occur
     }
 
-    const menuItems = itemList.map((item) => 
-        <MenuBox key={item.id} itemDetails={item} bagAdderFunc={addToBag} bagRemoverFunc={removeFromBag}/>
+    const bagAlertMounted = useRef(false);
+    useEffect(() => {
+        if(bagAlertMounted.current){
+            setBagAlert(<BagAlert item={lastModifiedItem}/>);
+            setShowAlert(true)
+        }
+        else{
+            bagAlertMounted.current = true;
+        }
+    }, [lastModifiedItem])
+
+    const menuItems = bag.map((item) => 
+        <MenuBox key={item.id} itemDetails={item} itemQuantityFunc={editItemQuantity}/>
     );
 
     return (
         <div className='Menu'>
+            <div className={`HiddenAlert ${showAlert && "AlertContainer"}`}>{bagAlert}</div>
             <PageTitle titleColor={"#5ebcaf"} titleContent={"Menu"} fadeStartOffset={0} fadeEndOffset={250}/>
             <PageHeader headerColor={"#5ebcaf"} headerContent={"Browse our delicious range of Soju"}/>
             <div className="MenuBoxContainer">
                 {menuItems}
             </div>
+
         </div>
     )
 }

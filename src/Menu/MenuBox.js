@@ -10,8 +10,7 @@ function MenuImage(props) {
 
 export default function MenuBox(props) {
     let itemDetails = props.itemDetails
-    let bagAdderFunc = props.bagAdderFunc;
-    let bagRemoverFunc = props.bagRemoverFunc
+    let itemQuantityFunc = props.itemQuantityFunc;
 
     let title = itemDetails.title;
     let productImage = itemDetails.imageUrl;
@@ -34,9 +33,9 @@ export default function MenuBox(props) {
             <div className="ItemName">{title}</div>
             <div className={`HiddenItemElement ${showDetails && 'ItemDescription'}`}>{description}</div>
             <div className="ItemPriceLine">
-                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'RemoveBagButton'}`} onClick={() => bagRemoverFunc(itemDetails)}>-</span>
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'RemoveBagButton'}`} onClick={() => itemQuantityFunc(itemDetails, -1)}>-</span>
                 <span><span className="ItemPrice">${price}</span><span className="Each">each</span></span>
-                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'AddBagButton'}`} onClick={() => bagAdderFunc(itemDetails)}>+</span>
+                <span className={`HiddenBagButton ${showDetails && 'BagButton'} ${showDetails && 'AddBagButton'}`} onClick={() => itemQuantityFunc(itemDetails, 1)}>+</span>
             </div>
             <MenuImage image={productImage}/>
         </div>
