@@ -9,7 +9,7 @@ import {
 import NavBar from './NavBar'
 import Home from './HomePage/Home'
 import About from './About'
-import ShoppingBag from './Bag'
+import ShoppingBag from './Bag/Bag'
 import Menu from './Menu/Menu'
 import BottomBar from './BottomBar'
 
