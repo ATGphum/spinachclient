@@ -11,10 +11,14 @@ export default function BagItem(props) {
 
     let item = props.item;
     let modifyBag = props.modifyBag;
+
+    function formHandler() {
+        console.log(898)
+    }
     return (
         <div className="BagItem">
             <div>{item.title}</div>
-            <input type="number" min="0" max={item.stock} step="1"/>
+            <input onChange={formHandler}type="number" min="0" max={item.stock} step="1"/>
             <MenuImage image={item.imageUrl} />
         </div>
     )

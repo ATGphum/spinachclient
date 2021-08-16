@@ -40,7 +40,10 @@ export default function Menu(props) {
 
             sessionStorage.setItem('bag', JSON.stringify(bag)) //store bag in session storage
 
-            window.setTimeout(() => {if(!showAlert)setShowAlert(false)}, 3000)//fade the alert after 3 seconds, but only if state variable is false
+            let timerId = window.setTimeout(() => {if(!showAlert)setShowAlert(false)}, 3000)//fade the alert after 3 seconds, but only if state variable is false
+            return (() => {
+                window.clearTimeout(timerId)
+            })
         }
         else{
             bagAlertMounted.current = true;
