@@ -1,4 +1,5 @@
 import "./BagItem.css"
+import { useState, useEffect, useRef } from "react";
 
 function MenuImage(props) {
     let image = props.image
@@ -10,15 +11,19 @@ function MenuImage(props) {
 export default function BagItem(props) {
 
     let item = props.item;
-    let modifyBag = props.modifyBag;
+    let itemQuantityFunc = props.itemQuantityFunc;
 
-    function formHandler() {
-        console.log(898)
+    const inputQuantity = useRef(null)
+
+    function onQuantityUpdate() {
+        let newQuantity = Math.round(inputQuantity.current.value)
+        itemQuantityFunc(item, newQuantity)
     }
     return (
         <div className="BagItem">
             <div>{item.title}</div>
-            <input onChange={formHandler}type="number" min="0" max={item.stock} step="1"/>
+            <input ref={inputQuantity} defaultValue={item.quantity} type="number" min="0" max={item.stock} step="1" />
+            <button onClick={onQuantityUpdate}>update</button>
             <MenuImage image={item.imageUrl} />
         </div>
     )
