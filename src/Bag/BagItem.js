@@ -15,16 +15,30 @@ export default function BagItem(props) {
 
     const inputQuantity = useRef(null)
 
-    function onQuantityUpdate() {
+    function onQuantityUpdate(removeItem=false) {
         let newQuantity = Math.round(inputQuantity.current.value)
+        if(removeItem) newQuantity = 0
         itemQuantityFunc(item, newQuantity)
     }
+
+    function handleKeyPress(e) {
+        if(e.key === 'Enter'){
+            onQuantityUpdate()
+        }
+    }
+
     return (
         <div className="BagItem">
-            <div>{item.title}</div>
-            <input ref={inputQuantity} defaultValue={item.quantity} type="number" min="0" max={item.stock} step="1" />
-            <button onClick={onQuantityUpdate}>update</button>
-            <MenuImage image={item.imageUrl} />
+          <MenuImage image={item.imageUrl} />
+          <div>
+            <div className="BagItemTitle">{item.title}</div>
+            <input className="BagItemQuantity" ref={inputQuantity} defaultValue={item.quantity} type="number" onKeyPress={(e) => handleKeyPress(e)}/>
+            </div>
+            <div className="BagRemoveItem" onClick={() => onQuantityUpdate(true)}>×</div>
+            <div className="PriceContainer">
+                {/*<div className="BagItemPrice"><span>individual: </span>${item.price.toFixed(2)}</div>*/}
+                <div className="BagItemTotalPrice"><span className="TotalDecorator">total: </span>${(item.quantity * item.price).toFixed(2)}</div>
+            </div>
         </div>
     )
 }

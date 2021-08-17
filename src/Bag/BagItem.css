@@ -1,0 +1,85 @@
+.BagItem {
+    position: relative;
+    background-color: white;
+    margin: 2em auto 2em auto;
+    width: 30em;
+    height: 25em;
+}
+
+.BagItemPic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15em;
+    bottom: -0.7em;
+    left: -4em;
+    position: absolute;
+}
+
+.BagItemPicContainer {
+}
+
+.BagItemTitle {
+    font-weight: 700;
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 0em
+}
+
+.QuantityContainer {
+    flex-grow: 1;
+}
+
+.BagItemQuantity {
+    font-family: 'Noto Sans';
+    font-size: 2rem;
+    width: 2.5em;
+    text-align: center;
+    background-color: rgb(244 244 244 / 0%);
+    border-style: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.PriceContainer {
+    position: absolute;
+    font-size: 2rem;
+    text-align: left;
+    bottom: 5%;
+    right: 5%;
+}
+
+.BagItemTotalPrice {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.BagRemoveItem {
+    color: black;
+    font-weight: 800;
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: 0.5s;
+}
+
+.BagRemoveItem:Hover {
+    color: #000000; 
+    cursor: pointer;
+}
+
+.TotalDecorator {
+    font-size: 0.5em;
+}

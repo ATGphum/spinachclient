@@ -1,5 +1,6 @@
 import "./Bag.css"
 import PageTitle from "./PageTitle"
+import PageHeader from "./PageHeader"
 import BagItem from "./BagItem"
 
 export default function Bag(props) {
@@ -31,7 +32,8 @@ export default function Bag(props) {
 
     return (
         <div className="Bag">
-            <PageTitle titleColor={"white"} titleContent={"Bag"} fadeStartOffset={0} fadeEndOffset={250}/>
+            <PageTitle titleColor={"#fff"} titleContent={"Bag"} fadeStartOffset={0} fadeEndOffset={250}/>
+            <PageHeader headerColor={"#fff"} headerContent={"Finalise and confirm your soju purchase"}/>
             {bagComponents}
         </div>
     )
