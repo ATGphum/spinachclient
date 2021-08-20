@@ -32,8 +32,8 @@ export default function Bag(props) {
 
     return (
         <div className="Bag">
-            <PageTitle titleColor={"#fff"} titleContent={"Bag"} fadeStartOffset={0} fadeEndOffset={250}/>
-            <PageHeader headerColor={"#fff"} headerContent={"Finalise and confirm your soju purchase"}/>
+            <PageTitle titleColor={"#5ebcaf"} titleContent={"Bag"} fadeStartOffset={0} fadeEndOffset={250}/>
+            <PageHeader headerColor={"#5ebcaf"} headerContent={"Finalise and confirm your soju purchase"}/>
             {bagComponents}
         </div>
     )

@@ -29,15 +29,17 @@ export default function BagItem(props) {
 
     return (
         <div className="BagItem">
-          <MenuImage image={item.imageUrl} />
-          <div>
+
+            <div className="BagItemQuantity" ref={inputQuantity} contentEditable={true} defaultValue={item.quantity} type="number" onKeyPress={(e) => handleKeyPress(e)}>{item.quantity}</div>
+
+            <MenuImage image={item.imageUrl} />
+
             <div className="BagItemTitle">{item.title}</div>
-            <input className="BagItemQuantity" ref={inputQuantity} defaultValue={item.quantity} type="number" onKeyPress={(e) => handleKeyPress(e)}/>
-            </div>
+
             <div className="BagRemoveItem" onClick={() => onQuantityUpdate(true)}>×</div>
             <div className="PriceContainer">
                 {/*<div className="BagItemPrice"><span>individual: </span>${item.price.toFixed(2)}</div>*/}
-                <div className="BagItemTotalPrice"><span className="TotalDecorator">total: </span>${(item.quantity * item.price).toFixed(2)}</div>
+                <div className="BagItemTotalPrice">${(item.quantity * item.price).toFixed(2)}</div>
             </div>
         </div>
     )

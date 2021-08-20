@@ -1,9 +1,14 @@
 .BagItem {
     position: relative;
-    background-color: white;
+    background-color: #f4f4f4;
     margin: 2em auto 2em auto;
-    width: 30em;
-    height: 25em;
+    width: 22em;
+    height: 22em;
+    transition: 0.5s;
+}
+
+.BagItem:hover{
+    background-color: #b6e2d3;
 }
 
 .BagItemPic {
@@ -27,17 +32,26 @@
     width: 0em
 }
 
-.QuantityContainer {
-    flex-grow: 1;
-}
-
 .BagItemQuantity {
     font-family: 'Noto Sans';
-    font-size: 2rem;
-    width: 2.5em;
-    text-align: center;
-    background-color: rgb(244 244 244 / 0%);
+    font-size: 6rem;
+    width: 1.1em;
+    text-align: right;
     border-style: none;
+    background-color: #61bdb1;
+    color: white;
+    position: absolute;
+    top: 22%;
+    right: -10%;
+    border-radius: 10px;
+}
+
+.BagItemQuantity:focus {
+    outline: none;
+}
+
+.QuantityX {
+    font-size: 4rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -66,7 +80,7 @@ input[type=number] {
 }
 
 .BagRemoveItem {
-    color: black;
+    color: #f4f4f4;
     font-weight: 800;
     font-size: 3rem;
     position: absolute;
