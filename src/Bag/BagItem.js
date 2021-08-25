@@ -30,7 +30,7 @@ export default function BagItem(props) {
     return (
         <div className="BagItem">
 
-            <div className="BagItemQuantity" ref={inputQuantity} contentEditable={true} defaultValue={item.quantity} type="number" onKeyPress={(e) => handleKeyPress(e)}>{item.quantity}</div>
+            <input className="BagItemQuantity" ref={inputQuantity} defaultValue={item.quantity} type="number" onKeyPress={(e) => handleKeyPress(e)} />
 
             <MenuImage image={item.imageUrl} />
 

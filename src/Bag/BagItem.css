@@ -35,19 +35,27 @@
 .BagItemQuantity {
     font-family: 'Noto Sans';
     font-size: 6rem;
-    width: 1.1em;
-    text-align: right;
+    width: 1.4em;
+    text-align: center;
     border-style: none;
-    background-color: #61bdb1;
+    background-color: #b6e2d3;
     color: white;
     position: absolute;
-    top: 22%;
+    transform: translateY(-50%);
+    top: 50%;
     right: -10%;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .BagItemQuantity:focus {
     outline: none;
+}
+
+.BagItemQuantity:hover {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    color:#61bdb1; 
 }
 
 .QuantityX {

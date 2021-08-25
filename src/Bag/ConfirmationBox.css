@@ -1,0 +1,48 @@
+.ConfirmationBox {
+    position: relative;
+    background-color: #f4f4f4;
+    margin: 2em auto 2em auto;
+    width: 22em;
+    height: 22em;
+    transition: 0.5s;
+}
+
+.ConfirmationBox:hover {
+    background-color: #ffeba2;
+}
+
+.ConfirmItems {
+    padding: 1em;
+}
+
+
+.SubTotalContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+}
+
+.ShippingContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+}
+
+.OrderTotalContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+    padding: 1em 0 1em 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-top-style: solid;
+    border-width: 1px;
+}
+
+.Summary {
+    font-weight: 700;
+    font-size: 2rem;
+    top: 5%;
+    left: 5%;
+    width: 0em
+}
