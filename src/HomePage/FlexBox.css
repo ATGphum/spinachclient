@@ -3,9 +3,28 @@
     width: 28em;
     background-color: #cccccc;;
     flex-shrink: 0;
+    background-size: cover;
+}
+
+.FlexContainer {
+    padding: 3rem;
 }
 
 .BoxContainer .FlexBox:nth-child(2) , .BoxContainer .FlexBox:nth-child(4){
     align-self: flex-end;
     margin: -20em -0em -5em -5em;
+}
+
+.SmallText {
+    color: white;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.LargeText {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: left;
 }

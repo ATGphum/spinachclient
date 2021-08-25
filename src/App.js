@@ -118,7 +118,7 @@ function App() {
             <ShoppingBag bag={bag} setBag={setBag}/>
           </Route>
           <Route path="/">
-            <Home />
+            <Home bag={bag}/>
           </Route>
         </Switch>
         <BottomBar/>

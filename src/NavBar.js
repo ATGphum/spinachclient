@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Logo from './Logo'
 import Userbutton from './Userbutton'
 import {
-    BrowserRouter as Router,
     Link
   } from "react-router-dom"
 

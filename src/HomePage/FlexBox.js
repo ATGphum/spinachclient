@@ -2,8 +2,8 @@ import "./FlexBox.css"
 
 export default function FlexBox(props){
 
-    let smallText = props.smallText
-    let largeText = props.largeText
+    let smallText = <div className='SmallText'>{props.smallText}</div>
+    let largeText = <div className='LargeText'>{props.largeText}</div>
     let boxImage = props.boxImage
     let backgroundColor = props.backgroundColor
 
@@ -14,8 +14,10 @@ export default function FlexBox(props){
 
     return (
         <div style={divStyle} className='FlexBox'>
+            <div className="FlexContainer">
             {smallText}
             {largeText}
+            </div>
         </div>
     )
 }
