@@ -8,40 +8,69 @@
 }
 
 .BrowseLink {
+    position: absolute;
     text-decoration: none;
     background-color: #149f5c;
     color: white;
     border-radius: 50px;
     padding: 0.5em;
+    margin: 1em 0 0 0;
     font-size: 1.2rem;
 }
 
 .Products {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.Products::-webkit-scrollbar {
+    display: none;
 }
 
 .Product {
-    font-size: 1rem;;
-    width: 60em;
+    font-size: 1rem;
+    width: 100%;
     flex: 0 0 auto;
-    display: block;
+    display: flex;
     position: relative;
+    justify-content: space-evenly;
 }
 
 .ProductInfo {
     font-family: 'Montserrat';
-    position: absolute;
+    width: 50%;
 }
 
 .ProductName {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
+    margin: 0.3em 0 0.3em 0;
 }
 
 .ProductSubheader {
     font-size: 2.2rem;
+    margin: 0.3em 0 0.3em 0;;
+}
+
+.BrandDescription {
+    font-size: 1.2rem;
+    margin: 0.3em 0 0.3em 0;;
 }
 
 .ProductPic {
-    transform: rotate(17deg);
+    height: 22em;
+    width: 22rem;
+    align-self: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Swipe {
+    position: absolute;
+    bottom: 0;
+    font-size: 4rem;
 }

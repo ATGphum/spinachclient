@@ -19,8 +19,10 @@ export default function ProductBox(props) {
             <div className="ProductInfo">
                 <div className="ProductSubheader">For the love of it!</div>
                 <div className="ProductName">{item.title}</div>
+                <div className="BrandDescription">{item.branddescription}</div>
+                <Link className="BrowseLink" to="/menu">Shop selection</Link>
             </div>
-            <ProductImage image={item.imageUrl}/>
+            <ProductImage image={item.miscimageUrl}/>
         </span>
     )
 
@@ -28,8 +30,8 @@ export default function ProductBox(props) {
         <div className='ProductBox'>
             <div className='Products'>
                 {products}
+                <div className="Swipe">→</div>
             </div>
-            <Link className="BrowseLink" to="/menu">Shop selection</Link>
         </div>
     ) 
 }
