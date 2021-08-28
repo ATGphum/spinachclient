@@ -4,3 +4,4 @@ npm install @fontsource/noto-sans
 npm install @fontsource/montserrat
 npm install react-transition-group --save
 npm install @paypal/react-paypal-js
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
