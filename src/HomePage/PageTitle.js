@@ -42,6 +42,6 @@ export default function PageTitle(props){
     }, [style])
 
     return (
-        <div style={style} className='PageTitle'>{titleContent}</div>
+        <div style={style} className='HomePageTitle'>{titleContent}</div>
     )
 }

@@ -28,7 +28,7 @@ export default function Bag(props) {
 
     //map the bag items to each component to list
     let bagComponents = relevantBag.map((item) => 
-        <BagItem key={item.id} item={item} itemQuantityFunc={editItemQuantity}/>
+        <BagItem key={item.title} item={item} itemQuantityFunc={editItemQuantity}/>
     )
 
     return (

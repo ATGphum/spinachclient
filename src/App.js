@@ -17,7 +17,6 @@ function App() {
 
   let itemList = [
     { 
-        id: 0,
         title: "Chilsung soju",
         imageUrl: "https://justliquor.com.au/1080-large_default/chamisul-soju.jpg",
         miscimageUrl: "https://i0.wp.com/www.plantnet.com.au/wp-content/uploads/plantnet-rootstock-plum-Dwarf-Damson.jpg?fit=2114%2C1400&ssl=1",

@@ -46,16 +46,23 @@
     right: -10%;
     border-radius: 10px;
     transition: 0.5s;
+    background-color: #f4f4f4;
+    color:#61bdb1; 
+    opacity: 1;
 }
 
 .BagItemQuantity:focus {
     outline: none;
+    background-color: #f4f4f4;
+    color:#61bdb1; 
+    opacity: 1
 }
 
 .BagItemQuantity:hover {
     cursor: pointer;
     background-color: #f4f4f4;
     color:#61bdb1; 
+    opacity: 1
 }
 
 .QuantityX {

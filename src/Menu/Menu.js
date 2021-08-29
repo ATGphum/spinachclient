@@ -51,7 +51,7 @@ export default function Menu(props) {
     }, [lastModifiedItem])
 
     const menuItems = bag.map((item) => 
-        <MenuBox key={item.id} itemDetails={item} itemQuantityFunc={editItemQuantity}/>
+        <MenuBox key={item.title} itemDetails={item} itemQuantityFunc={editItemQuantity}/>
     );
 
     return (

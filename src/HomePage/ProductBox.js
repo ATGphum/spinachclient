@@ -15,7 +15,7 @@ export default function ProductBox(props) {
     let bag = props.bag
 
     let products = bag.map((item) => 
-        <span className="Product">
+        <span key={item.title} className="Product">
             <div className="ProductInfo">
                 <div className="ProductSubheader">For the love of it!</div>
                 <div className="ProductName">{item.title}</div>
