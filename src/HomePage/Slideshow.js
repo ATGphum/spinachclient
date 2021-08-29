@@ -15,7 +15,10 @@ function Slide(props){
 
     useEffect(() => {
         setShow(true)
-        window.setTimeout(() => {setShow(false)}, slideDuration - 300)
+        let slideTimer = window.setTimeout(() => {setShow(false)}, slideDuration - 300)
+        return () => {
+            window.clearTimeout(slideTimer)
+        }
     }, [slideNumber, slideDuration])
 
     return ( 
@@ -104,7 +107,10 @@ export default function Slideshow() {
             setCurrentSlide((currentSlide + 1) % 3)
         }
 
-        window.setTimeout(updateSlide, slideDuration)
+        let slideTimer = window.setTimeout(updateSlide, slideDuration)
+        return () => {
+            window.clearTimeout(slideTimer)
+        }
     }, [currentSlide])
 
 
